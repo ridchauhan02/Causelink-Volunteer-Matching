@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "page1";
+}
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+
+
+    <!--Welcome card-->
+    <div style="padding-top: 50px ; padding-right: 100px; padding-left: 100px;">
+        <p style="color:white; font-family:judson; font-size:40px;padding-left:20px"><b>Register New Organization</b></p><br />
+
+        <div class="card" style="background-color:rgba(202, 173, 214, 0.3);  ">
+            <div class="card-body">
+                <div align="left">
+                    <p style="font-size:30px; font-family:Inter; color:white">What best describes your organization?</p><br /><br />
+                    <table align="center">
+                        <tr>
+                            <td style="padding:20px">
+                                <button>
+                                    <a asp-area="" asp-controller="Org" asp-action="find" style="color:black;">
+                                        <div class="card" style="width:200px; height:150px">
+                                            <div class="card-body">
+                                                <img src="~/css/3.png" width="80" height="80">
+                                                <p>Non Profit </p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </button>
+                            </td>
+                            <td style="padding:20px">
+                                <button>
+                                    <a asp-area="" asp-controller="Org" asp-action="find" style="color:black;">
+                                        <div class="card" style="width:200px; height:150px">
+                                            <div class="card-body">
+                                                <img src="~/css/2.png" width="80" height="80">
+                                                <p>Public School </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </button>
+                            </td>
+                            <td style="padding:20px">
+                                <button>
+                                    <a asp-area="" asp-controller="Org" asp-action="find" style="color:black;">
+                                        <div class="card" style="width:200px; height:150px">
+                                            <div class="card-body">
+                                                <img src="~/css/1.png" width="80" height="80">
+                                                <p>School affiliated Nonprofit </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding:20px">
+                                <button>
+                                    <a asp-area="" asp-controller="Org" asp-action="find" style="color:black;">
+                                        <div class="card" style="width:200px; height:150px">
+                                            <div class="card-body">
+                                                <img src="~/css/5.png" width="80" height="80">
+                                                <p>Government Agency </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </button>
+                            </td>
+                            <td style="padding:20px">
+                                <a asp-area="" asp-controller="Org" asp-action="find" style="color:black;">
+                                    <button>
+
+                                        <div class="card" style="width:200px; height:150px">
+                                            <div class="card-body">
+                                                <img src="~/css/4.png" width="80" height="80">
+                                                <p>Private School </p>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    </table><br /><br />
+                    <div align="center">
+                        <button>
+
+                            <div class="card" style="width:700px; height:100px">
+                                <div class="card-body flex-column">
+                                    <img src="~/css/help.png" width="80" height="80">
+                                    Your organization is not listed or need help?
+                                    Contact Customer Service
+
+
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div><br /><br />
+    </div>
+    <br />
+    <br />
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
+
+
+
+

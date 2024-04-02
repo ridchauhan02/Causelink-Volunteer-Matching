@@ -1,0 +1,87 @@
+﻿@model CauseLink.Models.addpost
+
+<style>
+    /* Custom styles for this page only */
+    .card {
+        background-color: #CAADD6;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .card-header {
+        background-color: #CAADD6 ;
+        color: black;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .btn {
+        background-color:rgba(122, 96, 136, 1)   ;
+        color: black;
+        border: none;
+    }
+
+        .btn:hover {
+            background-color: darkpurple; /* You can adjust the hover color if needed */
+        }
+</style>
+<br /><br />
+<div class="card">
+    <div class="card-header bg-purple text-black text-uppercase">
+        <h4>Delete Post</h4>
+    </div>
+
+    <div class="card-body">
+        @if (Model != null)
+        {
+            <form asp-action="Deletepost" asp-controller="OrgDashBoard" method="post">
+                <input type="hidden" asp-for="Id" />
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Title" class="label-control"><b>Title : </b></label>
+                           <b> @Html.Label(Model.Title)</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Address" class="label-control"><b>Address : </b></label>
+                           <b> @Html.Label(Model.Address)</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Mode" class="label-control"><b>Mode :</b> </label>
+                          <b>  @Html.Label(Model.Mode)</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="Delete" class="btn rounded-0">Delete</button>
+                </div>
+            </form>
+        }
+        @if (TempData["msg"] != null)
+        {
+            <script>
+                alert('@TempData["msg"].ToString();');
+                window.location.href = "@Url.Action("Index", "OrgDashBoard")";
+            </script>
+        }
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

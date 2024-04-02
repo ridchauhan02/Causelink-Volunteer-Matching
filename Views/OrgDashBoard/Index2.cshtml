@@ -1,0 +1,534 @@
+﻿
+@{
+    ViewData["Title"] = "Index2";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .user-dashboard {
+            background-color: #291539;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+
+            .user-dashboard .div {
+                background-color: #291539;
+                overflow: hidden;
+                width: 1512px;
+                height: 1456px;
+                position: relative;
+            }
+
+            .user-dashboard .footer {
+                position: absolute;
+                width: 1514px;
+                height: 278px;
+                top: 1092px;
+                left: 0;
+                background-color: transparent;
+            }
+
+            .user-dashboard .overlap-group {
+                position: relative;
+                width: 1512px;
+                height: 278px;
+                background-color: #765f93;
+            }
+
+            .user-dashboard .rectangle {
+                width: 139px;
+                height: 121px;
+                top: 18px;
+                left: 670px;
+                position: absolute;
+                object-fit: cover;
+            }
+
+            .user-dashboard .ri-instagram-fill {
+                position: absolute;
+                width: 42px;
+                height: 36px;
+                top: 164px;
+                left: 618px;
+            }
+
+            .user-dashboard .ic-outline-facebook {
+                position: absolute;
+                width: 44px;
+                height: 38px;
+                top: 162px;
+                left: 685px;
+            }
+
+            .user-dashboard .mdi-twitter {
+                position: absolute;
+                width: 39px;
+                height: 33px;
+                top: 164px;
+                left: 753px;
+            }
+
+            .user-dashboard .bi-youtube {
+                position: absolute;
+                width: 42px;
+                height: 36px;
+                top: 164px;
+                left: 816px;
+            }
+
+            .user-dashboard .terms-and-conditions {
+                position: absolute;
+                width: 254px;
+                top: 213px;
+                left: 613px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 24px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper {
+                position: absolute;
+                width: 200px;
+                top: 200px;
+                left: 659px;
+                font-family: "Judson-Bold", Helvetica;
+                font-weight: 700;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-2 {
+                position: absolute;
+                width: 350px;
+                top: 50px;
+                left: 573px;
+                font-family: "Kadwa-Bold", Helvetica;
+                font-weight: 700;
+                color: #ffffff;
+                font-size: 50px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .line {
+                position: absolute;
+                width: 1512px;
+                height: 2px;
+                top: 256px;
+                left: 0;
+            }
+
+            .user-dashboard .newpost {
+                position: absolute;
+                width: 222px;
+                height: 65px;
+                top: 50px;
+                left: 50px;
+            }
+
+            .user-dashboard .overlap {
+                position: relative;
+                width: 220px;
+                height: 65px;
+                background-color: #caadd6;
+                border-radius: 15px;
+            }
+
+            .user-dashboard .text-wrapper-3 {
+                position: absolute;
+                width: 120px;
+                top: 14px;
+                left: 55px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #000000;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .opp {
+                top: 354px;
+                position: absolute;
+                width: 934px;
+                height: 171px;
+                left: 294px;
+            }
+
+            .user-dashboard .overlap-2 {
+                position: relative;
+                width: 924px;
+                height: 171px;
+                background-color: #caadd6;
+                border-radius: 15px;
+            }
+
+            .user-dashboard .overlap-3 {
+                position: absolute;
+                width: 729px;
+                height: 72px;
+                top: 7px;
+                left: 27px;
+            }
+
+            .user-dashboard .overlap-group-2 {
+                position: absolute;
+                width: 728px;
+                height: 72px;
+                top: 0;
+                left: 1px;
+            }
+
+            .user-dashboard .p {
+                position: absolute;
+                width: 706px;
+                top: 0;
+                left: 0;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .edit {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 32px;
+                left: 688px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #aa7cce;
+            }
+
+            .user-dashboard .img {
+                position: absolute;
+                width: 19px;
+                height: 27px;
+                top: 4px;
+                left: 8px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .text-wrapper-4 {
+                position: absolute;
+                width: 295px;
+                top: 38px;
+                left: 0;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .overlap-group-3 {
+                position: absolute;
+                width: 258px;
+                height: 43px;
+                top: 85px;
+                left: 79px;
+            }
+
+            .user-dashboard .text-wrapper-5 {
+                width: 258px;
+                top: 0;
+                left: 0;
+                color: #050207;
+                font-size: 20px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-6 {
+                position: absolute;
+                width: 208px;
+                top: 28px;
+                left: 0;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .text-wrapper-7 {
+                position: absolute;
+                width: 547px;
+                top: 139px;
+                left: 79px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .mingcute-map-line {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 86px;
+                left: 28px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .mdi-web {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 113px;
+                left: 31px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .uil-calender {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 140px;
+                left: 31px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .delete {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 39px;
+                left: 805px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #aa7cce;
+            }
+
+            .user-dashboard .overlap-wrapper {
+                top: 559px;
+                position: absolute;
+                width: 934px;
+                height: 171px;
+                left: 294px;
+            }
+
+            .user-dashboard .overlap-group-wrapper {
+                top: 764px;
+                position: absolute;
+                width: 934px;
+                height: 171px;
+                left: 294px;
+            }
+
+            .user-dashboard .header {
+                position: fixed;
+                width: 1521px;
+                height: 132px;
+                top: 0;
+                left: -1px;
+                background-color: transparent;
+            }
+
+            .user-dashboard .overlap-4 {
+                position: relative;
+                width: 1513px;
+                height: 132px;
+                background-color: #765f93;
+            }
+
+            .user-dashboard .text-wrapper-8 {
+                width: 79px;
+                top: 71px;
+                left: 220px;
+                color: #ffffff;
+                font-size: 30px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-9 {
+                position: absolute;
+                width: 88px;
+                top: 71px;
+                left: 337px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-10 {
+                position: absolute;
+                width: 88px;
+                top: 71px;
+                left: 681px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .text-wrapper-11 {
+                position: absolute;
+                width: 192px;
+                top: 71px;
+                left: 463px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .rectangle-2 {
+                width: 176px;
+                height: 132px;
+                top: 0;
+                left: 1px;
+                position: absolute;
+                object-fit: cover;
+            }
+
+            .user-dashboard .signinbtn {
+                position: absolute;
+                width: 188px;
+                height: 65px;
+                top: 46px;
+                left: 1249px;
+            }
+
+            .user-dashboard .div-wrapper {
+                position: relative;
+                width: 186px;
+                height: 65px;
+                background-color: #caadd6;
+                border-radius: 50px;
+            }
+
+            .user-dashboard .text-wrapper-12 {
+                position: absolute;
+                width: 112px;
+                top: 14px;
+                left: 43px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #000000;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+    </style>
+</head>
+
+<body>
+    <div class="user-dashboard">
+        <div class="div">
+           
+            <div class="text-wrapper">Recent Posts</div>
+            <div class="text-wrapper-2">CONNECTFOR</div>
+            <img class="line" src="img/line-14.svg" />
+            <div class="newpost">
+                <div class="overlap"><div class="text-wrapper-3">New Post</div></div>
+            </div>
+            <div class="opp">
+                <div class="overlap-2">
+                    <div class="overlap-3">
+                        <div class="overlap-group-2">
+                            <p class="p">Material collection and sorting volunteer</p>
+                            <div class="edit"><img class="img" src="~/css/edit.png" /></div>
+                        </div>
+                        <div class="text-wrapper-4">ConnectFor</div>
+                    </div>
+                    <div class="overlap-group-3">
+                        <div class="text-wrapper-5">Ahmedabad</div>
+                        <div class="text-wrapper-6">120 Miles</div>
+                    </div>
+                    <div class="text-wrapper-7">Recruiting through Dec 31st</div>
+                    <img class="mingcute-map-line" src="~/css/map.png" />
+                    <img class="mdi-web" src="~/css/globe.png" />
+                    <img class="uil-calender" src="img/image.svg" />
+                    <div class="delete"><img class="img" src="~/css/delete.png" /></div>
+                </div>
+            </div>
+            <div class="overlap-wrapper">
+                <div class="overlap-2">
+                    <div class="overlap-3">
+                        <div class="overlap-group-2">
+                            <p class="p">Material collection and sorting volunteer</p>
+                            <div class="edit"><img class="img" src="~/css/edit.png" /></div>
+                        </div>
+                        <div class="text-wrapper-4">ConnectFor</div>
+                    </div>
+                    <div class="overlap-group-3">
+                        <div class="text-wrapper-5">Ahmedabad</div>
+                        <div class="text-wrapper-6">120 Miles</div>
+                    </div>
+                    <div class="text-wrapper-7">Recruiting through Dec 31st</div>
+                    <img class="mingcute-map-line" src="~/css/map.png" />
+                    <img class="mdi-web" src="~/css/globe.png" />
+                    <img class="uil-calender" src="~/css/calendar.png" />
+                    <div class="delete"><img class="img" src="~/css/delete.png" /></div>
+                </div>
+            </div>
+            <div class="overlap-group-wrapper">
+                <div class="overlap-2">
+                    <div class="overlap-3">
+                        <div class="overlap-group-2">
+                            <p class="p">Material collection and sorting volunteer</p>
+                            <div class="edit"><img class="img" src="~/css/edit.png" /></div>
+                        </div>
+                        <div class="text-wrapper-4">ConnectFor</div>
+                    </div>
+                    <div class="overlap-group-3">
+                        <div class="text-wrapper-5">Ahmedabad</div>
+                        <div class="text-wrapper-6">120 Miles</div>
+                    </div>
+                    <div class="text-wrapper-7">Recruiting through Dec 31st</div>
+                    <img class="mingcute-map-line" src="img/mingcute-map-line-3.svg" />
+                    <img class="mdi-web" src="img/mdi-web-2.svg" />
+                    <img class="uil-calender" src="img/uil-calender.svg" />
+                    <div class="delete"><img class="img" src="~/css/delete.png" /></div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
+
+

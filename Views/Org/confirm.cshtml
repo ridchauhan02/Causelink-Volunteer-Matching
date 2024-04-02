@@ -1,0 +1,52 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+    <!--Welcome card-->
+    <div style="padding-top: 50px ; padding-right: 100px; padding-left: 100px;">
+        <p style="color:white; font-family:judson; font-size:40px;padding-left:20px"><b>Organization Confirmation</b></p><br />
+        <div class="card" style="background-color:rgba(202, 173, 214, 0.3); padding-left:30px ;padding-right:30px ">
+            <div class="card-body">
+                <div align="left">
+                    <b style="font-size:30px; font-family:Inter; color:white">Confirm your Organization</b><br /><br />
+                    <div>
+                        <input type="text" id="organizationInput" style="padding-left:20px; font-family:Judson;border-radius:10px; border-color:rgba(255,255,255,0);height:60px; width:1600px; background-color:rgba(234, 223, 223, 1) " />
+                    </div><br />
+                    <div align="right">
+                        <a asp-area="" asp-controller="Org" asp-action="find" style="color:black;">
+                            <button style="background-color:rgba(234, 223, 223, 1); border-radius:8px; height:43.66px;width:105.06px">Go Back</button>
+                        </a>
+                        <button onclick="confirmOrganization()" style="background-color:rgba(234, 223, 223, 1); border-radius:8px; height:43.66px;width:105.06px">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div><br /><br />
+    </div>
+    <br />
+    <br />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function confirmOrganization() {
+            var organization = document.getElementById('organizationInput').value.trim();
+            if (organization === "") {
+                alert("Please enter full address of your organization name.");
+                return false; // Prevent form submission
+            } else {
+                // If organization name is not empty, proceed to the next page
+                window.location.href = '@Url.Action("verify", "Org")'; // Modify this line according to your routing
+            }
+        }
+    </script>
+</body>
+</html>

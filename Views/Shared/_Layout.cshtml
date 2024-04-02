@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <style>
+    #hp {
+        float: right;
+        margin:  0 0 0;
+        width:550px;
+        border-radius:10px;
+    }
+
+    #hpp {
+        float: right;
+        margin: 0 0 0;
+        width: 500px;
+        border-radius: 10px;
+        border-right: 10px solid #766093;
+        border-left: 10px solid #766093;
+        border-top: 10px solid #766093;
+        border-bottom: 10px solid #766093;
+        box-shadow:7px 7px 10px 0px #766093;
+        
+    }
+    </style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm  box-shadow mb-3" style="background-color:rgb(118,96,147);">
+            <img src="~/css/CauseLink.png" width="80" height="80">
+
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Main" asp-action="Index" style="color:white; font-size:22px">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Search" asp-action="Index" style="color:white; font-size:22px">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Signin" asp-action="Sign" style="color:white; font-size:22px">Register your Organization</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="FAQ" asp-action="Index" style="color:white; font-size:22px">FAQ's</a>
+                        </li>
+                        <li>
+
+                            <button style="position: absolute;top: 30px;right: 15px;font-size: 18px; background-color:rgb(202,173,214);border-radius: 12px;border-color:rgba(202,173,214,0)">
+                               <a class="nav-link" asp-area="" asp-controller="Signin" asp-action="Sign" style="color:black; font-size:22px"> SignIn</a>
+                            </button>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--
+
+    <div  style="padding-top: 100px ; padding-right: 100px; padding-left: 100px;">
+        <div class="card" style="background-color:rgba(202, 173, 214, 1);  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7);">
+        <div class="card-body" >
+                <img src="~/css/images.jpg" id="hp">
+                <div style="text-align:justify; padding-left:60px" >
+            <b style="font-size:60px; font-family:judson">WELCOME</b><br /><br />
+                <b>
+                    <p style="font-size:25px; font-family:judson">There are hundreds of thousands of volunteer opportunities<br /> throughout the world just waiting for the right volunteer to<br /> step up.Search our database for volunteer opportunities inside<br /> and outside of the home that meet critical needs.The world is<br /> waiting for you to shine your light.</p>
+               </b>
+               </div>
+            </div>
+    </div>
+    </div>
+    <br /><br />
+
+    
+    <div style="padding-top: 50px ; padding-right: 100px; padding-left: 100px;" align="center">
+        <div class="card" style="background-color:rgba(42, 21, 58, 1) ">
+            <div class="card-body">
+                <b style="font-size:60px; font-family:judson;background: linear-gradient(to bottom, #FFFFFF,#D95CBD);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; ">CAUSELINK</b><br /><br />
+
+                <img src="~/css/vol.jpg" id="hpp">
+                <div style="text-align:justify; padding-left:60px">
+                    
+                        <p style="padding-top:80px;font-size:30px; font-family:judson;color:white">Points of Light Engage pulls volunteer opportunities from sites around the <br />web to provide the most comprehensive database of volunteer <br />opportunities around the world. Individuals an search for volunteer<br /> projects, nonprofits can post and manage event sign-ups, and visitors<br /> are invited to start projects of their own – all in one place.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+
+    <!--render-->
+    <div >
+        
+            @RenderBody()
+       
+    </div>
+    <!--footer-->
+    <footer style="background-color:rgba(118, 96, 147, 1)">
+        <div align="center" ><br />
+            <img src="~/css/CauseLink.png" width="80" height="80" style="border-radius:50px">
+            <br /><br />
+            <img src="~/css/27.png" width="30" height="30" >
+            <img src="~/css/25.png" width="30" height="30" >
+            <img src="~/css/26.png" width="30" height="30" >
+            <img src="~/css/24.png" width="30" height="30" >
+            <br /><br />
+           <p style="color:white">Terms and Conditions</p>
+            <p style="color:white">Contact Causelink</p><br />
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

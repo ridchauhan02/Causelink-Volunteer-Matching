@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+
+    <!--Welcome card-->
+    <div style="padding-top: 50px; padding-right: 250px; padding-left: 250px;">
+        <p style="color:white; font-family:judson; font-size:40px;padding-left:20px" align="center"><b>Edit Post</b></p><br />
+
+        <div class="card" style="background-color:rgba(202, 173, 214, 0.3); padding-left:60px; padding-right:60px; border-radius:20px">
+            <div class="card-body">
+                <form id="editPostForm" asp-controller="OrgDashBoard" asp-action="Editpost" method="post" align="center" style="padding-top:40px">
+
+                    <input type="text" name="Title" value="@Model.Title" placeholder="Title" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="date" name="Date" value="@Model.Date" placeholder="Date" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Commitment" value="@Model.Commitment" placeholder="Commitment" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Location" value="@Model.Location" placeholder="In-person or Remote" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Address" value="@Model.Address" placeholder="Address" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Duration" value="@Model.Duration" placeholder="Duration" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Frequency" value="@Model.Frequency" placeholder="Frequency" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Mode" value="@Model.Mode" placeholder="Mode" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+                    <input type="text" name="Note" value="@Model.Note" placeholder="Note" required style="padding-left:20px; font-family:Judson; border-radius:10px; border-color:rgba(255,255,255,0); height:50px; width:900px" /><br /><br />
+
+                    <div align="center">
+                        <button type="submit" value="update" style="background-color:rgba(234, 223, 223, 1); border-radius:8px; height:43.66px;width:105.06px">update</button>
+                    </div>
+                </form>
+                @if (TempData["msg"] != null){
+                <script>
+                    alert('@TempData["msg"].ToString();');
+                        window.location.href = "@Url.Action("Index","OrgDashBoard")";
+                    </script>
+                }
+
+            </div>
+        </div><br /><br />
+    </div>
+    <br />
+    <br />
+
+  <!--  <script>
+        document.getElementById("newPostForm").onsubmit = function (event) {
+            var inputs = this.querySelectorAll("input[required]");
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value.trim()) {
+                    event.preventDefault();
+                    alert("Please fill out all fields before submitting.");
+                    return false;
+                }
+            }
+            // Form is valid
+            // Here you can also implement AJAX to submit form data without reloading the page
+        };
+    </script>-->
+</body>
+</html>

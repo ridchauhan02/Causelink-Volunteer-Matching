@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "find";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+    <style>
+        .search-results ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            max-height: 200px;
+            overflow-y: auto;
+            width: 1600px; /* Match input width */
+            background-color: #fff;
+        }
+
+        .search-results li {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+            .search-results li:hover {
+                background-color: #f2f2f2;
+            }
+    </style>
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+    <!--Welcome card-->
+    <div style="padding-top: 50px; padding-right: 100px; padding-left: 100px;">
+        <p style="color:white; font-family:judson; font-size:40px;padding-left:20px"><b>Register New Organization</b></p><br />
+        <div class="card" style="background-color:rgba(202, 173, 214, 0.3); padding-left:30px ;padding-right:30px ">
+            <div class="card-body">
+                <div align="left">
+                    <b style="font-size:30px; font-family:Inter; color:white">Let’s find your school</b><br /><br />
+                    <p style="font-size:20px; font-family:Inter; color:white">School Name (E.g. Woodward Academy)</p>
+                    <div>
+                        <input id="schoolSearchInput" type="text" style="padding-left:20px; font-family:Judson;border-radius:10px; border-color:rgba(255,255,255,0);height:60px; width:1600px; background-color:rgba(234, 223, 223, 1)" />
+                        <div id="searchResults" class="search-results"></div>
+                    </div><br />
+                    <div align="right">
+                        <a asp-area="" asp-controller="Signin" asp-action="page1" style="color:black;">
+                            <button style="background-color:rgba(234, 223, 223, 1); border-radius:8px; height:43.66px;width:105.06px">Back</button>
+                        </a>
+                        <a asp-area="" asp-controller="Org" asp-action="confirm" id="nextButton" style="color:black;">
+                            <button style="background-color:rgba(234, 223, 223, 1); border-radius:8px; height:43.66px;width:105.06px">Next</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div><br /><br />
+    </div>
+    <br />
+    <br />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        var schools = [
+            "Woodward Academy",
+            "Harvard University",
+            "Stanford University",
+            "Massachusetts Institute of Technology",
+            "Princeton University"
+        ];
+
+        $(document).ready(function () {
+            $('#schoolSearchInput').on('input', function () {
+                var query = $(this).val().toLowerCase();
+
+                if (query.length < 1) {
+                    $('#searchResults').empty().hide();
+                    return;
+                }
+
+                var filteredSchools = schools.filter(function (school) {
+                    return school.toLowerCase().indexOf(query) > -1;
+                });
+
+                var resultsContainer = $('#searchResults');
+                resultsContainer.empty().show();
+
+                if (filteredSchools.length) {
+                    var resultList = $('<ul>').appendTo(resultsContainer);
+                    filteredSchools.forEach(function (school) {
+                        $('<li>')
+                            .text(school)
+                            .appendTo(resultList)
+                            .on('click', function () {
+                                $('#schoolSearchInput').val($(this).text());
+                                resultsContainer.empty().hide();
+                            });
+                    });
+                } else {
+                    resultsContainer.append('<li>No schools found</li>');
+                }
+            });
+
+            // Hide results when clicking outside
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('#schoolSearchInput, #searchResults').length) {
+                    $('#searchResults').empty().hide();
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // Existing code...
+
+            // Prevent redirection if the input field is empty
+            $('#nextButton').on('click', function (event) {
+                var inputVal = $('#schoolSearchInput').val().trim();
+                if (!inputVal) {
+                    event.preventDefault(); // Stop the redirection
+                    alert('Please enter a school name.'); // Optionally alert the user
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,125 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CauseLink
+build_property.RootNamespace = CauseLink
+build_property.ProjectDir = C:\Users\Khushi\source\repos\CAUSELINK\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Khushi\source\repos\CAUSELINK
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/FAQ/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Main/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/OrgDashBoard/Deletepost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnRGFzaEJvYXJkXERlbGV0ZXBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/OrgDashBoard/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnRGFzaEJvYXJkXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/OrgDashBoard/Editpost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnRGFzaEJvYXJkXEVkaXRwb3N0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/OrgDashBoard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnRGFzaEJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/OrgDashBoard/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnRGFzaEJvYXJkXEluZGV4Mi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/OrgDashBoard/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnRGFzaEJvYXJkXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Org/confirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnXGNvbmZpcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Org/details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnXGRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Org/find.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnXGZpbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Org/OrgIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnXE9yZ0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Org/verify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JnXHZlcmlmeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Search/detail1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXGRldGFpbDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Search/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Signin/page0.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmluXHBhZ2UwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Signin/page1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmluXHBhZ2UxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Signin/Sign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmluXFNpZ24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Khushi/source/repos/CAUSELINK/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-us0kn5vqd8

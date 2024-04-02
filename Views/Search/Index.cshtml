@@ -1,0 +1,1220 @@
+﻿@model IEnumerable<CauseLink.Models.addpost>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<!DOCTYPE >
+<html>
+<head>
+    <style>
+        .search .div-2 {
+            position: absolute;
+            width: 100%; /* Use 100% instead of a fixed pixel value to make it fit the screen */
+            max-width: 1517px; /* Optional: if you still want to limit the maximum width */
+            height: 95px;
+            top: 10px;
+            left: 0; /* Changed to ensure it's always centered */
+            display: flex; /* Using Flexbox for alignment */
+            justify-content: space-around; /* This will evenly space the child elements */
+            align-items: center; /* This will vertically center the child elements */
+            padding: 0 10px; /* Adding some padding on both sides */
+        }
+
+        .search .overlap-6, .search .overlap-7 {
+            flex-grow: 1; /* Allows these elements to grow and fill the available space */
+            margin: 0 10px; /* Adds some margin between elements */
+            display: flex; /* Using Flexbox for internal alignment */
+            align-items: center; /* Aligns items vertically in the center */
+            position: relative;
+            height: 62px;
+            border-radius: 10px;
+            border: 2px solid #765f93;
+            background-color: #ffffff;
+            opacity: 0.8;
+        }
+
+        .search .rectangle-3 {
+            display: none; /* Since the parent now has the background, this might be unnecessary */
+        }
+
+        .search .text-wrapper-23, .search .text-wrapper-21 {
+            margin-left: 20px; /* Adds margin to separate text from the edge */
+            opacity: 0.5;
+            font-family: "Judson-Regular", Helvetica;
+            font-weight: 400;
+            color: #050207;
+            font-size: 30px;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .search .line-7 {
+            position: absolute;
+            width: 100%; /* Make it stretch across the screen */
+            top: 94px;
+            left: 0;
+            height: 1px;
+            object-fit: cover;
+        }
+
+        .search .searchbtn {
+            all: unset;
+            box-sizing: border-box;
+            width: 281px;
+            height: 62px;
+            margin: 0 10px; /* Adds some margin for spacing */
+            display: flex; /* Using Flexbox for internal alignment */
+            justify-content: center; /* Center the button text and icon horizontally */
+            align-items: center; /* Center the button text and icon vertically */
+            border-radius: 10px;
+            background-color: #caadd6;
+            border: 2px solid #aa7cce;
+        }
+
+        .search .overlap-group-3 {
+            display: none; /* This container might be unnecessary with Flexbox */
+        }
+
+        .search .text-wrapper-22 {
+            position: absolute;
+            width: 89px;
+            top: 12px;
+            left: 73px;
+            opacity: 0.5;
+            font-family: "Judson-Regular", Helvetica;
+            font-weight: 400;
+            color: #050207;
+            font-size: 30px;
+            letter-spacing: 0;
+            line-height: normal;
+            white-space: nowrap;
+            /* Adjustments might not be needed if using flexbox as suggested above */
+        }
+
+        /* Assuming tdesign-search is a class for the search icon inside the button */
+        .tdesign-search {
+            margin-left: 10px; /* Adds some space between the text and the icon */
+            width: 24px; /* Adjust according to the actual size of the icon */
+            height: 24px; /* Adjust according to the actual size of the icon */
+        }
+
+        .search {
+            background-color: #291539;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+
+            .search .div {
+                background-color: #291539;
+                overflow: hidden;
+                width: 1512px;
+                height: 1842px;
+                position: relative;
+            }
+
+            .search .footer {
+                position: absolute;
+                width: 1514px;
+                height: 278px;
+                top: 1478px;
+                left: 0;
+                background-color: transparent;
+            }
+
+            .search .overlap-group {
+                position: relative;
+                width: 1512px;
+                height: 278px;
+                background-color: #765f93;
+            }
+
+            .search .rectangle {
+                position: absolute;
+                width: 139px;
+                height: 121px;
+                top: 18px;
+                left: 670px;
+                object-fit: cover;
+            }
+
+            .search .ri-instagram-fill {
+                position: absolute;
+                width: 42px;
+                height: 36px;
+                top: 164px;
+                left: 618px;
+            }
+
+            .search .ic-outline-facebook {
+                position: absolute;
+                width: 44px;
+                height: 38px;
+                top: 162px;
+                left: 685px;
+            }
+
+            .search .mdi-twitter {
+                position: absolute;
+                width: 39px;
+                height: 33px;
+                top: 164px;
+                left: 753px;
+            }
+
+            .search .bi-youtube {
+                position: absolute;
+                width: 42px;
+                height: 36px;
+                top: 164px;
+                left: 816px;
+            }
+
+            .search .terms-and-conditions {
+                position: absolute;
+                width: 254px;
+                top: 213px;
+                left: 613px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 24px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .heading {
+                position: absolute;
+                width: 802px;
+                height: 113px;
+                top: 149px;
+                left: 644px;
+            }
+
+            .search .text-wrapper {
+                position: absolute;
+                width: 713px;
+                top: 0;
+                left: 0;
+                font-family: "Judson-Bold", Helvetica;
+                font-weight: 700;
+                color: #d9d9d9;
+                font-size: 50px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .line {
+                width: 798px;
+                top: 112px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                object-fit: cover;
+            }
+
+            .search .text-wrapper-2 {
+                position: absolute;
+                width: 203px;
+                top: 69px;
+                left: 10px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #d9d9d9;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .opp {
+                top: 280px;
+               
+                width: 808px;
+                height: 159px;
+                left: 644px;
+            }
+
+            .search .overlap {
+                position: relative;
+                width: 798px;
+                height: 159px;
+                background-color: #ffffff;
+                border-radius: 15px;
+            }
+
+            .search .p {
+                position: absolute;
+                width: 610px;
+                top: 19px;
+                left: 31px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .text-wrapper-3 {
+                position: absolute;
+                width: 137px;
+                top: 65px;
+                left: 31px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .text-wrapper-4 {
+                width: 128px;
+                top: 110px;
+                left: 62px;
+                color: #050207;
+                font-size: 20px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .text-wrapper-5 {
+                position: absolute;
+                width: 96px;
+                top: 110px;
+                left: 218px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .text-wrapper-6 {
+                position: absolute;
+                width: 243px;
+                top: 111px;
+                left: 350px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .mingcute-map-line {
+                position: absolute;
+                width: 21px;
+                height: 29px;
+                top: 110px;
+                left: 31px;
+            }
+
+            .search .mdi-web {
+                position: absolute;
+                width: 21px;
+                height: 29px;
+                top: 110px;
+                left: 191px;
+            }
+
+            .search .uil-calender {
+                position: absolute;
+                width: 21px;
+                height: 29px;
+                top: 110px;
+                left: 323px;
+            }
+
+            .search .oppbtn {
+                position: absolute;
+                width: 164px;
+                height: 43px;
+                top: 99px;
+                left: 615px;
+            }
+
+            .search .div-wrapper {
+                position: relative;
+                width: 162px;
+                height: 43px;
+                background-color: #caadd6;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #aa7cce;
+            }
+
+            .search .text-wrapper-7 {
+                position: absolute;
+                width: 114px;
+                top: 10px;
+                left: 22px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 15px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .overlap-wrapper {
+                top: 629px;
+                position: absolute;
+                width: 808px;
+                height: 159px;
+                left: 644px;
+            }
+
+            .search .text-wrapper-8 {
+                position: absolute;
+                width: 377px;
+                top: 65px;
+                left: 31px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .overlap-group-wrapper {
+                top: 812px;
+                position: absolute;
+                width: 808px;
+                height: 159px;
+                left: 644px;
+            }
+
+            .search .text-wrapper-9 {
+                position: absolute;
+                width: 767px;
+                top: 19px;
+                left: 31px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .text-wrapper-10 {
+                position: absolute;
+                width: 187px;
+                top: 65px;
+                left: 31px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .opp-2 {
+                top: 995px;
+                position: absolute;
+                width: 808px;
+                height: 159px;
+                left: 644px;
+            }
+
+            .search .opp-3 {
+                top: 1178px;
+                position: absolute;
+                width: 808px;
+                height: 159px;
+                left: 644px;
+            }
+
+            .search .filter {
+                position: absolute;
+                width: 522px;
+                height: 1037px;
+                top: 150px;
+                left: 70px;
+            }
+
+            .search .overlap-2 {
+                position: relative;
+                width: 514px;
+                height: 1037px;
+                background-color: #ffffff;
+                border-radius: 15px;
+            }
+
+            .search .text-wrapper-11 {
+                position: absolute;
+                width: 178px;
+                top: 26px;
+                left: 35px;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .text-wrapper-12 {
+                position: absolute;
+                width: 294px;
+                top: 154px;
+                left: 35px;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 27px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .text-wrapper-13 {
+                position: absolute;
+                width: 178px;
+                top: 29px;
+                left: 324px;
+                opacity: 0.25;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                text-decoration: underline;
+                white-space: nowrap;
+            }
+
+            .search .img {
+                width: 514px;
+                top: 135px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                object-fit: cover;
+            }
+
+            .search .line-2 {
+                width: 514px;
+                top: 389px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                object-fit: cover;
+            }
+
+            .search .line-3 {
+                position: absolute;
+                width: 514px;
+                height: 1px;
+                top: 94px;
+                left: 0;
+                object-fit: cover;
+            }
+
+            .search .remote {
+                position: absolute;
+                width: 147px;
+                height: 35px;
+                top: 212px;
+                left: 35px;
+            }
+
+            .search .text-wrapper-14 {
+                width: 107px;
+                top: 0;
+                left: 38px;
+                color: #050207;
+                font-size: 25px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .ellipse {
+                top: 8px;
+                border-radius: 10px;
+                border: 1px solid;
+                border-color: #000000;
+                opacity: 0.7;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: 0;
+            }
+
+            .search .inperson {
+                position: absolute;
+                width: 147px;
+                height: 35px;
+                top: 268px;
+                left: 35px;
+            }
+
+            .search .all {
+                position: absolute;
+                width: 147px;
+                height: 26px;
+                top: 326px;
+                left: 35px;
+            }
+
+            .search .text-wrapper-15 {
+                position: absolute;
+                width: 107px;
+                top: 0;
+                left: 38px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 25px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .ellipse-2 {
+                top: 3px;
+                border-radius: 10px;
+                border: 1px solid;
+                border-color: #000000;
+                opacity: 0.7;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: 0;
+            }
+
+            .search .text-wrapper-16 {
+                position: absolute;
+                width: 294px;
+                top: 413px;
+                left: 35px;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 27px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .ongoing {
+                position: absolute;
+                width: 147px;
+                height: 35px;
+                top: 471px;
+                left: 35px;
+            }
+
+            .search .event {
+                position: absolute;
+                width: 147px;
+                height: 35px;
+                top: 527px;
+                left: 35px;
+            }
+
+            .search .corps {
+                position: absolute;
+                width: 191px;
+                height: 26px;
+                top: 585px;
+                left: 35px;
+            }
+
+            .search .text-wrapper-17 {
+                position: absolute;
+                width: 151px;
+                top: 0;
+                left: 38px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 25px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .all-2 {
+                position: absolute;
+                width: 191px;
+                height: 26px;
+                top: 638px;
+                left: 35px;
+            }
+
+            .search .ellipse-3 {
+                top: 5px;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: 0;
+            }
+
+            .search .line-4 {
+                width: 514px;
+                top: 693px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                object-fit: cover;
+            }
+
+            .search .line-5 {
+                width: 514px;
+                top: 769px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                object-fit: cover;
+            }
+
+            .search .line-6 {
+                width: 514px;
+                top: 845px;
+                left: 0;
+                position: absolute;
+                height: 1px;
+                object-fit: cover;
+            }
+
+            .search .features {
+                position: absolute;
+                width: 296px;
+                height: 35px;
+                top: 869px;
+                left: 35px;
+            }
+
+            .search .overlap-group-2 {
+                position: relative;
+                width: 294px;
+                height: 35px;
+            }
+
+            .search .text-wrapper-18 {
+                position: absolute;
+                width: 294px;
+                top: 0;
+                left: 0;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 27px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .ic-outline-arrow {
+                position: absolute;
+                width: 33px;
+                height: 33px;
+                top: 1px;
+                left: 99px;
+            }
+
+            .search .skill {
+                position: absolute;
+                width: 296px;
+                height: 35px;
+                top: 793px;
+                left: 35px;
+            }
+
+            .search .ic-outline-arrow-2 {
+                top: 1px;
+                left: 143px;
+                position: absolute;
+                width: 33px;
+                height: 33px;
+            }
+
+            .search .issue {
+                position: absolute;
+                width: 296px;
+                height: 36px;
+                top: 716px;
+                left: 35px;
+            }
+
+            .search .overlap-3 {
+                position: relative;
+                width: 294px;
+                height: 36px;
+            }
+
+            .search .text-wrapper-19 {
+                position: absolute;
+                width: 294px;
+                top: 1px;
+                left: 0;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 27px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .ic-outline-arrow-3 {
+                top: 0;
+                left: 122px;
+                position: absolute;
+                width: 33px;
+                height: 33px;
+            }
+
+            .search .rectangle-2 {
+                position: fixed;
+                width: 1512px;
+                height: 131px;
+                top: 132px;
+                left: 0;
+                background-color: #765f93;
+            }
+
+          
+            .search .overlap-4 {
+                position: absolute;
+                width: 645px;
+                height: 62px;
+                top: 0;
+                left: 71px;
+                background-color: #d9d9d9;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #765f93;
+            }
+
+            .search .text-wrapper-20 {
+                top: 12px;
+                left: 59px;
+                position: absolute;
+                width: 112px;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .overlap-5 {
+                position: absolute;
+                width: 398px;
+                height: 62px;
+                top: 0;
+                left: 741px;
+                background-color: #d9d9d9;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #765f93;
+            }
+
+
+          
+          
+
+            .search .text-wrapper-22 {
+                position: absolute;
+                width: 89px;
+                top: 12px;
+                left: 73px;
+                opacity: 0.5;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+          
+
+          
+
+          
+
+       
+            .search .header {
+                position: fixed;
+                width: 1521px;
+                height: 134px;
+                top: 0;
+                left: -1px;
+                background-color: transparent;
+            }
+
+            .search .overlap-8 {
+                position: absolute;
+                width: 1513px;
+                height: 132px;
+                top: 0;
+                left: 0;
+                background-color: #765f93;
+            }
+
+            .search .text-wrapper-24 {
+                width: 79px;
+                top: 71px;
+                left: 220px;
+                color: #ffffff;
+                font-size: 30px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .text-wrapper-25 {
+                position: absolute;
+                width: 88px;
+                top: 71px;
+                left: 337px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .text-wrapper-26 {
+                position: absolute;
+                width: 88px;
+                top: 71px;
+                left: 843px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .text-wrapper-27 {
+                position: absolute;
+                width: 342px;
+                top: 71px;
+                left: 463px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .search .rectangle-4 {
+                position: absolute;
+                width: 176px;
+                height: 132px;
+                top: 0;
+                left: 1px;
+                object-fit: cover;
+            }
+
+            .search .signinbtn {
+                position: absolute;
+                width: 188px;
+                height: 65px;
+                top: 46px;
+                left: 1249px;
+            }
+
+            .search .overlap-group-4 {
+                position: relative;
+                width: 186px;
+                height: 65px;
+                background-color: #caadd6;
+                border-radius: 50px;
+            }
+
+            .search .text-wrapper-28 {
+                position: absolute;
+                width: 88px;
+                top: 14px;
+                left: 49px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #000000;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .search .line-8 {
+                position: absolute;
+                width: 1512px;
+                height: 1px;
+                top: 133px;
+                left: 1px;
+                object-fit: cover;
+            }
+
+            .card-body .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adds space between inputs/buttons */
+}
+
+.input-field {
+    border-radius: 10px;
+    border: 2px solid rgba(234, 234, 234, 0); /* Making the border invisible */
+    height: 62px;
+    padding: 0 15px;
+}
+
+/* Responsive widths using percentages */
+.input-field:first-child {
+    flex-grow: 2; /* Keyword input takes more space */
+}
+
+.input-field:last-child {
+    flex-grow: 1; /* Location input takes less space */
+}
+
+.search-btn {
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    /* Add more styles as needed */
+}
+
+/* Responsiveness */
+@@media (max-width: 768px) {
+    .card-body .input-group {
+        flex-direction: column;
+    }
+
+    .input-field,
+    .search-btn {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+    </style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="search">
+        <div class="div">
+            <div class="div-2" style="padding-top:0px">
+                <input placeholder="KeyWord" class="overlap-6 text-wrapper-23" type="text" id="keywordInput">
+                    <!-- Add input box for keyword -->
+                   <!-- <input type="text" id="keywordInput" />-->
+
+                <input placeholder="Location" class="overlap-6 text-wrapper-23" type="text" id="locationInput">
+
+                
+                <img class="line-7" src="img/line-8-3.svg" />
+            </div>
+            <div class="heading">
+                <div class="text-wrapper">Volunteer Opportunities</div>
+                <img class="line" src="img/line-7.svg" />
+                <div class="text-wrapper-2">@ViewBag.PostCount results</div>
+            </div>
+            <div style="padding-top:260px">
+            @foreach (addpost item in Model)
+            {
+            <div class="opp" style=" padding-left:650px">
+                <div class="overlap">
+                        <p class="p">@item.Title</p>
+                    <div class="text-wrapper-3">@item.Mode</div>
+                    <div class="text-wrapper-4">@item.Address</div>
+                    <div class="text-wrapper-5">@item.Location</div>
+                    <div class="text-wrapper-6">Recruiting through @item.Date</div>
+                            <img class="mingcute-map-line" src="~/css/map.png" />
+                            <img class="mdi-web" src="~/css/globe.png" />
+                            <img class="uil-calender" src="~/css/calendar.png" />
+                            <div class="oppbtn">
+
+                                <button class="div-wrapper">
+                                    <a asp-controller="Search" asp-action="detail1">
+                                        <div class="text-wrapper-7">View Opportunity</div>
+                                    </a>
+                                </button>
+                            </div>
+                </div>
+            </div><br />
+            }
+           </div>
+            
+           
+            <div class="filter">
+                <div class="overlap-2">
+                    <div class="text-wrapper-11">Active filters</div>
+                    <div class="text-wrapper-12">In-person or Remote:</div>
+                    <div class="text-wrapper-13">Clear filters</div>
+                    <img class="img" src="img/line-9-2.svg" />
+                    <img class="line-2" src="img/line-10.svg" />
+                    <img class="line-3" src="img/line-8-2.svg" />
+                    <div class="remote">
+                        <div class="text-wrapper-14">Remote</div>
+                        <div class="ellipse"></div>
+                    </div>
+                    <div class="inperson">
+                        <div class="text-wrapper-14">Inperson</div>
+                        <div class="ellipse"></div>
+                    </div>
+                    <div class="all">
+                        <div class="text-wrapper-15">All</div>
+                        <div class="ellipse-2"></div>
+                    </div>
+                    <div class="text-wrapper-16">Commitment:</div>
+                    <div class="ongoing">
+                        <div class="text-wrapper-14">Ongoing</div>
+                        <div class="ellipse"></div>
+                    </div>
+                    <div class="event">
+                        <div class="text-wrapper-14">Event</div>
+                        <div class="ellipse"></div>
+                    </div>
+                    <div class="corps">
+                        <div class="text-wrapper-17">AmeriCorps</div>
+                        <div class="ellipse-2"></div>
+                    </div>
+                    <div class="all-2">
+                        <div class="text-wrapper-17">All</div>
+                        <img class="ellipse-2"  />
+                    </div>
+                    <img class="line-4" src="img/line-11.svg" />
+                    <img class="line-5" src="img/line-12.svg" />
+                    <img class="line-6" src="img/line-13.svg" />
+                    <div class="features">
+                        <div class="overlap-group-2">
+                            <div  class="text-wrapper-18">Features  </div>
+
+                            <img class="ic-outline-arrow" src="~/css/down-arrow.png" />
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="overlap-group-2">
+                            <div class="text-wrapper-18">Skill Interest  </div>
+                            <img class="ic-outline-arrow-2" src="~/css/down-arrow.png" />
+                        </div>
+                    </div>
+                    <div class="issue">
+                        <div class="overlap-3">
+                            <div class="text-wrapper-19">Issue Area  </div>
+                            <img class="ic-outline-arrow-3" src="~/css/down-arrow.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                   
+
+        </div>
+       
+         
+        </div>
+
+
+
+          
+
+            @foreach (addpost item in Model)
+            {
+                <div class="opp" style="padding-left:300px; padding-top:80px">
+                    <div class="overlap-2">
+                        <div class="overlap-3">
+                            <div class="overlap-group-2">
+                                <p class="p">@item.Title</p>
+                            </div>
+                            <div class="text-wrapper-4">@item.Mode</div>
+                        </div>
+                        <div class="overlap-group-3">
+                            <div class="text-wrapper-5">@item.Address</div>
+                            <div class="text-wrapper-6">@item.Location</div>
+                        </div>
+                        <div class="text-wrapper-7">Recruiting through @item.Date</div>
+                        <img class="mingcute-map-line" src="~/css/map.png" />
+                        <img class="mdi-web" src="~/css/globe.png" />
+                        <img class="uil-calender" src="~/css/calendar.png" />
+                    </div>
+                </div>
+
+                <br />
+
+
+
+            }
+            </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // Get references to the input fields
+    const keywordInput = document.getElementById('keywordInput');
+    const locationInput = document.getElementById('locationInput');
+
+    // Get all opportunity cards
+    const opportunityCards = document.querySelectorAll('.opp');
+
+    // Function to filter opportunity cards based on keyword and location
+    function filterOpportunities() {
+        const keyword = keywordInput.value.toLowerCase();
+        const location = locationInput.value.toLowerCase();
+
+        opportunityCards.forEach(card => {
+            const title = card.querySelector('.p').textContent.toLowerCase();
+            const address = card.querySelector('.text-wrapper-4').textContent.toLowerCase();
+
+            // Check if the card's title or address contains the keyword and location
+            if (title.includes(keyword) && address.includes(location)) {
+                card.style.display = 'block'; // Show the card
+            } else {
+                card.style.display = 'none'; // Hide the card
+            }
+        });
+    }
+
+    // Add event listeners to input fields to trigger filtering on input
+    keywordInput.addEventListener('input', filterOpportunities);
+    locationInput.addEventListener('input', filterOpportunities);
+</script>
+
+
+
+</body>
+</html>
+
+

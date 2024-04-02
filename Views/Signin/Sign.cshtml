@@ -1,0 +1,43 @@
+﻿@model CauseLink.Models.signin
+@{
+    ViewData["Title"] = "Sign";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+    <div style="padding-top: 100px ; padding-right: 400px; padding-left: 400px;">
+        <div class="card" style="background-color:rgba(202, 173, 214, 1); border-radius:50px ;height:500px ">
+            <div class="card-body">
+                <div align="center">
+                    <br />
+                    <b style="font-size:50px; font-family:Judson; ">Sign In to CauseLink</b><br /><br />
+                    <p style="font-size:25px; font-family:Judson; ">Enter your email address below</p><br />
+                    <form method="post" asp-controller="Signin" asp-action="Sign">
+                        <input type="email" name="Email" placeholder="Email" style="padding-left:20px; font-family:Judson;border-radius:10px; border-color:rgba(255,255,255,0);height:50px; width:350px" required />
+                        <br /><br />
+                        <input type="password" name="Password" placeholder="Password" style="padding-left:20px; font-family:Judson;border-radius:10px; border-color:rgba(255,255,255,0);height:50px; width:350px" required />
+                        <br /><br />
+                        <button type="submit" style="border-color:rgba(255,255,255,0); background-color:rgba(171, 125, 207, 1); font-family:Judson; border-radius:37px;height:50px; width:350px"><b>Login</b></button>
+                    </form>
+                </div>
+            </div>
+        </div><br /><br />
+    </div>
+    <br />
+    <br />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

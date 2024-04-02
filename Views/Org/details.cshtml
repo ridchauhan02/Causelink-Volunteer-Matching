@@ -1,0 +1,58 @@
+﻿@model CauseLink.Models.details
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+
+    <div style="padding-top: 50px ; padding-right: 250px; padding-left: 250px;">
+        <p style="color:white; font-family:judson; font-size:40px;padding-left:20px" align="center"><b>Organization Details</b></p><br />
+
+        <div class="card" style="background-color:rgba(202, 173, 214, 0.3); padding-left:60px ;padding-right:60px ;border-radius:20px">
+            <div class="card-body">
+                <form id="orgDetailsForm" asp-controller="Org" asp-action="details" method="post" onsubmit="return validateForm()">
+                    <div align="center" style="padding-top:40px">
+                        <input name="Email" type="email" placeholder="Email Address" required style="padding-left:20px; font-family:Judson;border-radius:10px; height:50px; width:1000px" /><br /><br />
+                        <input name="Phone" type="number" placeholder="Phone Number" required style="padding-left:20px; font-family:Judson;border-radius:10px; height:50px; width:1000px" /><br /><br />
+                        <input name="Address" type="text" placeholder="Address" required style="padding-left:20px; font-family:Judson;border-radius:10px; height:50px; width:1000px" /><br /><br />
+                        <input name="About" type="text" placeholder="About your Organization" required style="padding-left:20px; font-family:Judson;border-radius:10px; height:50px; width:1000px" /><br /><br />
+                     <input name="Image" type="file" placeholder="Upload your image" required style="padding-left:20px; font-family:Judson;border-radius:10px; height:50px; width:1000px" /><br /><br />
+                         
+                        <button type="submit" style="background-color:rgba(234, 223, 223, 1); border-radius:8px; height:43.66px;width:105.06px">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div><br /><br />
+    </div>
+    <br />
+    <br />
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function validateForm() {
+            let inputs = document.querySelectorAll('#orgDetailsForm input');
+            for (let input of inputs) {
+                if (input.value === '') {
+                    alert('Please fill all the fields.');
+                    return false;
+                }
+            }
+            // Form is valid
+            return true;
+        }
+    </script>
+</body>
+</html>

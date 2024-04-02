@@ -1,0 +1,609 @@
+﻿@using CauseLink.Models
+
+@model IEnumerable<addpost>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .user-dashboard {
+            background-color: #291539;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+
+            .user-dashboard .div {
+                background-color: #291539;
+                overflow: hidden;
+                width: 1512px;
+                height: 1456px;
+                position: relative;
+            }
+
+            .user-dashboard .footer {
+                position: absolute;
+                width: 1514px;
+                height: 278px;
+                top: 1092px;
+                left: 0;
+                background-color: transparent;
+            }
+
+            .user-dashboard .overlap-group {
+                position: relative;
+                width: 1512px;
+                height: 278px;
+                background-color: #765f93;
+            }
+
+            .user-dashboard .rectangle {
+                width: 139px;
+                height: 121px;
+                top: 18px;
+                left: 670px;
+                position: absolute;
+                object-fit: cover;
+            }
+
+            .user-dashboard .ri-instagram-fill {
+                position: absolute;
+                width: 42px;
+                height: 36px;
+                top: 164px;
+                left: 618px;
+            }
+
+            .user-dashboard .ic-outline-facebook {
+                position: absolute;
+                width: 44px;
+                height: 38px;
+                top: 162px;
+                left: 685px;
+            }
+
+            .user-dashboard .mdi-twitter {
+                position: absolute;
+                width: 39px;
+                height: 33px;
+                top: 164px;
+                left: 753px;
+            }
+
+            .user-dashboard .bi-youtube {
+                position: absolute;
+                width: 42px;
+                height: 36px;
+                top: 164px;
+                left: 816px;
+            }
+
+            .user-dashboard .terms-and-conditions {
+                position: absolute;
+                width: 254px;
+                top: 213px;
+                left: 613px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 24px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper {
+                position: absolute;
+                width: 200px;
+                top: 200px;
+                left: 659px;
+                font-family: "Judson-Bold", Helvetica;
+                font-weight: 700;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-2 {
+                position: absolute;
+                width: 350px;
+                top: 50px;
+                left: 573px;
+                font-family: "Kadwa-Bold", Helvetica;
+                font-weight: 700;
+                color: #ffffff;
+                font-size: 50px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .line {
+                position: absolute;
+                width: 1512px;
+                height: 2px;
+                top: 256px;
+                left: 0;
+            }
+
+            .user-dashboard .newpost {
+                position: absolute;
+                width: 222px;
+                height: 65px;
+                top: 50px;
+                left: 50px;
+            }
+
+            .user-dashboard .overlap {
+                position: relative;
+                width: 220px;
+                height: 65px;
+                background-color: #caadd6;
+                border-radius: 15px;
+            }
+
+            .user-dashboard .text-wrapper-3 {
+                position: absolute;
+                width: 120px;
+                top: 14px;
+                left: 55px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #000000;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .opp {
+                top: 354px;
+                width: 934px;
+                height: 171px;
+                left: 294px;
+            }
+
+            .user-dashboard .overlap-2 {
+                position: relative;
+                width: 924px;
+                height: 171px;
+                background-color: #caadd6;
+                border-radius: 15px;
+            }
+
+            .user-dashboard .overlap-3 {
+                position: absolute;
+                width: 729px;
+                height: 72px;
+                top: 7px;
+                left: 27px;
+            }
+
+            .user-dashboard .overlap-group-2 {
+                position: absolute;
+                width: 728px;
+                height: 72px;
+                top: 0;
+                left: 1px;
+            }
+
+            .user-dashboard .p {
+                position: absolute;
+                width: 706px;
+                top: 0;
+                left: 0;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .edit {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 32px;
+                left: 688px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #aa7cce;
+            }
+
+            .user-dashboard .img {
+                position: absolute;
+                width: 19px;
+                height: 27px;
+                top: 4px;
+                left: 8px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .text-wrapper-4 {
+                position: absolute;
+                width: 295px;
+                top: 38px;
+                left: 0;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .overlap-group-3 {
+                position: absolute;
+                width: 258px;
+                height: 43px;
+                top: 85px;
+                left: 79px;
+            }
+
+            .user-dashboard .text-wrapper-5 {
+                width: 258px;
+                top: 0;
+                left: 0;
+                color: #050207;
+                font-size: 20px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-6 {
+                position: absolute;
+                width: 208px;
+                top: 28px;
+                left: 0;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .text-wrapper-7 {
+                position: absolute;
+                width: 547px;
+                top: 139px;
+                left: 79px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #050207;
+                font-size: 20px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .mingcute-map-line {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 86px;
+                left: 28px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .mdi-web {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 113px;
+                left: 31px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .uil-calender {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 140px;
+                left: 31px;
+                object-fit: cover;
+            }
+
+            .user-dashboard .delete {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 39px;
+                left: 805px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                border: 2px solid;
+                border-color: #aa7cce;
+            }
+
+            .user-dashboard .overlap-wrapper {
+                top: 559px;
+                position: absolute;
+                width: 934px;
+                height: 171px;
+                left: 294px;
+            }
+
+            .user-dashboard .overlap-group-wrapper {
+                top: 764px;
+                position: absolute;
+                width: 934px;
+                height: 171px;
+                left: 294px;
+            }
+
+            .user-dashboard .header {
+                position: fixed;
+                width: 1521px;
+                height: 132px;
+                top: 0;
+                left: -1px;
+                background-color: transparent;
+            }
+
+            .user-dashboard .overlap-4 {
+                position: relative;
+                width: 1513px;
+                height: 132px;
+                background-color: #765f93;
+            }
+
+            .user-dashboard .text-wrapper-8 {
+                width: 79px;
+                top: 71px;
+                left: 220px;
+                color: #ffffff;
+                font-size: 30px;
+                position: absolute;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-9 {
+                position: absolute;
+                width: 88px;
+                top: 71px;
+                left: 337px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .text-wrapper-10 {
+                position: absolute;
+                width: 88px;
+                top: 71px;
+                left: 681px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+            }
+
+            .user-dashboard .text-wrapper-11 {
+                position: absolute;
+                width: 192px;
+                top: 71px;
+                left: 463px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #ffffff;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .user-dashboard .rectangle-2 {
+                width: 176px;
+                height: 132px;
+                top: 0;
+                left: 1px;
+                position: absolute;
+                object-fit: cover;
+            }
+
+            .user-dashboard .signinbtn {
+                position: absolute;
+                width: 188px;
+                height: 65px;
+                top: 46px;
+                left: 1249px;
+            }
+
+            .user-dashboard .div-wrapper {
+                position: relative;
+                width: 186px;
+                height: 65px;
+                background-color: #caadd6;
+                border-radius: 50px;
+            }
+
+            .user-dashboard .text-wrapper-12 {
+                position: absolute;
+                width: 112px;
+                top: 14px;
+                left: 43px;
+                font-family: "Judson-Regular", Helvetica;
+                font-weight: 400;
+                color: #000000;
+                font-size: 30px;
+                letter-spacing: 0;
+                line-height: normal;
+                white-space: nowrap;
+                .user-dashboard
+
+        {
+            background-color: #291539;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+        }
+
+        .user-dashboard .div {
+            background-color: #291539;
+            width: 90%; /* Adjust width as needed */
+            max-width: 1200px; /* Maximum width */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .user-dashboard .footer {
+            width: 100%;
+            height: 278px;
+            background-color: transparent;
+        }
+            }
+
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+
+
+    <!--Welcome card-->
+    <div style="padding-top: 50px ;">
+        &emsp;
+        <button style=" background-color:rgb(202,173,214);border-radius: 12px;border-color:rgba(202,173,214,0)">
+            <a class="nav-link" asp-area="" asp-controller="OrgDashBoard" asp-action="New" style="color:black; font-size:22px"> New Post</a>
+        </button>
+
+        <b style="color:white; font-family:judson; font-size:40px;padding-left:450px" align="center">CONNECTOR</b>
+
+        
+
+        <div class="user-dashboard">
+            <div class="div">
+
+                <!-- <img class="line" src="img/line-14.svg" />
+
+
+                <table class="table table-bordered table-responsive table-dark table-hover">
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Address</th>
+                        <th>Mode</th>
+                        <th>Actions</th>
+                    </tr>
+                    @foreach (addpost item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Title</td>
+                            <td>@item.Address</td>
+                            <td>@item.Mode</td>
+                            <td>
+                                <a asp-action="Editpost" asp-route-id="@item.Id">Edit</a>
+                                <a asp-action="Deletepost" asp-route-id="@item.Id">Delete</a>
+
+                            </td>
+                        </tr>
+                    }
+                </table> -->
+
+           @foreach (addpost item in Model)
+            {
+                <div class="opp" style="padding-left:300px; padding-top:80px">
+                    <div class="overlap-2">
+                        <div class="overlap-3">
+                            <div class="overlap-group-2">
+                                    <p class="p">@item.Title</p>
+                                <div class="edit"> <a asp-action="Editpost" asp-route-id="@item.Id"><img class="img" src="~/css/edit.png" /></a></div>
+                            </div>
+                            <div class="text-wrapper-4">@item.Mode</div>
+                        </div>
+                        <div class="overlap-group-3">
+                            <div class="text-wrapper-5">@item.Address</div>
+                            <div class="text-wrapper-6">@item.Location</div>
+                        </div>
+                        <div class="text-wrapper-7">Recruiting through @item.Date</div>
+                        <img class="mingcute-map-line" src="~/css/map.png" />
+                        <img class="mdi-web" src="~/css/globe.png" />
+                        <img class="uil-calender" src="~/css/calendar.png" />
+                        <div class="delete"><a asp-action="Deletepost" asp-route-id="@item.Id"><img class="img" src="~/css/delete.png" /></a></div>
+                    </div>
+                </div><br />
+
+
+                   
+            }
+               <!-- @foreach (var item in Model)
+                {
+                    <div class="card overlap-2 " style="width: 18rem; margin: 10px;  top: 354px;
+                width: 934px;
+                height: 171px;
+                left: 294px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Title</h5>
+                            <div class="edit"> <a asp-action="Editpost" asp-route-id="@item.Id"><img class="img" src="~/css/edit.png" /></a></div>
+                            <p class="card-text">@item.Mode</p>
+
+                            <h6 class="card-subtitle mb-2 text-muted">@item.Address</h6>
+                            Add your action buttons within the card footer
+                                <div class="edit"> <a asp-action="Editpost" asp-route-id="@item.Id"><img class="img" src="~/css/edit.png" /></a></div>
+                                <div class="delete"><a asp-action="Deletepost" asp-route-id="@item.Id"><img class="img" src="~/css/delete.png" /></a></div>
+
+                               <a href="#" class="card-link">Edit</a>
+                                <a href="#" class="card-link">Delete</a>
+                        </div>
+                    </div>
+                }-->
+
+            </div>
+        </div>
+
+        <hr style="color:white" />
+
+
+        <div style="padding-top: 100px ; padding-right: 100px; padding-left: 100px;">
+            <div class="card" style="background-color:rgba(42, 21, 58, 1)  ">
+                <div class="card-body">
+                </div>
+            </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+    </div>
+    <br />
+    <br />
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "page0";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CauseLink</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CauseLink.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color:rgba(42, 21, 58, 1)" align="center">
+    <div style="padding-top: 100px ; padding-right: 400px; padding-left: 400px;">
+        <div class="card" style="background-color:rgba(202, 173, 214, 1); border-radius:50px ;height:500px ">
+            <div class="card-body" align="center">
+                <b style="font-size:50px; font-family:Judson; ">Complete your account</b><br /><br />
+                <p style="font-size:25px; font-family:Judson; ">In order to continue, please complete your account.</p><br />
+                <input type="text" placeholder="User Name" style="padding-left:20px; font-family:Judson;border-radius:10px; border-color:rgba(255,255,255,0);height:50px; width:350px" /><br /><br />
+                <input type="checkbox" class="terms-checkbox" /> Accept the Causelink Terms and Conditions<br />
+                <input type="checkbox" class="terms-checkbox" /> I am 13 years of age or older.<br />
+                <input type="checkbox" class="terms-checkbox" /> Receive additional communications from Causelink<br /><br />
+                <button id="submitButton" style="border-color:rgba(255,255,255,0); background-color:rgba(171, 125, 207, 1); font-family:Judson; border-radius:37px;height:50px; width:350px" disabled><b>Submit</b></button>
+            </div>
+        </div><br /><br />
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(document).ready(function () {
+            function updateButtonState() {
+                const isAllChecked = $('.terms-checkbox').length === $('.terms-checkbox:checked').length;
+                const isInputNotEmpty = $.trim($('input[type="text"]').val()).length > 0; // Check if input is not empty
+                $('#submitButton').prop('disabled', !(isAllChecked && isInputNotEmpty)); // Button is enabled only if all checkboxes are checked and input is not empty
+            }
+
+            // Check changes for both the checkboxes and the input field
+            $('.terms-checkbox, input[type="text"]').on('change keyup', function () {
+                updateButtonState();
+            });
+
+            // Redirect when the button is clicked
+            $('#submitButton').click(function () {
+                // Check again if all conditions are met to ensure safety
+                const isAllChecked = $('.terms-checkbox').length === $('.terms-checkbox:checked').length;
+                const isInputNotEmpty = $.trim($('input[type="text"]').val()).length > 0;
+                if (isAllChecked && isInputNotEmpty) {
+                    // Perform the redirect
+                    window.location.href = '@Url.Action("page1", "Signin")';
+                }
+            });
+
+            updateButtonState(); // Call it on page load as well
+        });
+
+    </script>
+
+</body>
+</html>
